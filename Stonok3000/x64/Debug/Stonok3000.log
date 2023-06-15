@@ -1,7 +1,16 @@
 ﻿  main.cpp
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\minwindef.h(130,1): warning C4005: APIENTRY: изменение макроопределения
-C:\Users\orksc\source\repos\Stonok3000\Stonok3000\libraries\GL\glfw3.h(123): message : см. предыдущее определение "APIENTRY"
-LINK : warning LNK4098: библиотека по умолчанию "MSVCRT" конфликтует с использованием других библиотек; используйте /NODEFAULTLIB:library
-main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glClear в функции main.
-main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glClearColor в функции main.
-C:\Users\orksc\source\repos\Stonok3000\x64\Debug\Stonok3000.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
+D:\OpenGLgame\Stonok\Stonok3000\libraries\GL\glfw3.h(123): message : см. предыдущее определение "APIENTRY"
+D:\OpenGLgame\Stonok\Stonok3000\src\Model.h(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+D:\OpenGLgame\Stonok\Stonok3000\src\main.cpp(78,74): warning C4244: +=: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\OpenGLgame\Stonok\Stonok3000\src\main.cpp(79,74): warning C4244: +=: преобразование "double" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+D:\OpenGLgame\Stonok\Stonok3000\src\main.cpp(103,13): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  Stonok3000.vcxproj -> D:\OpenGLgame\Stonok\x64\Debug\Stonok3000.exe

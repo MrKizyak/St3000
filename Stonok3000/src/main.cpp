@@ -108,17 +108,17 @@ void ScrollCallback(GLFWwindow* window, double xoffset, double yoffset) {
 //пингуем адрес
 void ipping()
 {
-	this_thread::sleep_for(chrono::milliseconds(30000));
 	while (1) {
 		//std::string ip
-		this_thread::sleep_for(chrono::milliseconds(30000));
-		int x = system("ping 192.168.0.140");//  > /dev/null 2>&1
+		this_thread::sleep_for(chrono::milliseconds(2000));
+		int x = system("ping 192.168.0.140 | findstr \"число байт=\"");//  > /dev/null 2>&1 ping 192.168.0.140 int x = system("ping 192.168.0.140 >nul & echo %ERRORLEVEL%")
 		if (x == 0) {
 			YNping = true;
 		}
 		else {
 			YNping = false;
 		}
+
 	}
 }
 
@@ -181,6 +181,7 @@ int main()
 	Model* pModel = new Model();
 	if (pModel->Load("untitled.obj") != true) {
 		printf("Error load\n");
+		system("pause");
 		return -1;
 	}
 
@@ -193,6 +194,7 @@ int main()
 	
 	if (pShader->Load("shader.frag", "shader.vert") != true) {
 		printf("Error Load\n");
+		system("pause");
 		return -1;
 	}
 	
@@ -244,7 +246,7 @@ int main()
 		if (YNping == true) {
 			glUniform4f(vertexColorLocation, 0.0f, 11.0f, 0.0f, 1.0f);
 		}
-		else if (YNping != true) {
+		else  {
 			glUniform4f(vertexColorLocation, 11.0f, 0.0f, 0.0f, 1.0f);
 		}
 		
